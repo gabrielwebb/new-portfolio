@@ -1,40 +1,34 @@
-const slideArea = document.querySelector(".slides")
-const images = slideArea.querySelectorAll(".images")
+let slideArea = document.querySelector("div.slides")
+let images = slideArea.querySelectorAll("img")
 
 let currentSlide = 0
-let z = 1
+let zIndex = 1
 
 slideArea.addEventListener("click", function () {
     currentSlide = currentSlide + 1
-    if (currentSlide > images.length - 1) {
-        currentSlide = 0
-    }
-    z = z + 1
+    currentSlide = currentSlide % images.length
 
-    images.forEach(image => {
-        image.style.animation = ""
+    zIndex = zIndex + 1
+
+    images[currentSlide].style.zIndex = zIndex
+
+    images.forEach(img => {
+        img.classList.remove("displayed")
     })
 
-    images[currentSlide].style.zIndex = z
-    images[currentSlide].style.animation = "fade 0.5s"
+    images[currentSlide].classList.add("displayed")
 })
 
-// Mouse Over Area
-
-slideArea.addEventListener('mouseover', function () {
-    images.forEach(image => {
-        const x = 25 * (Math.floor(Math.random() * 5)) - 50
-        const y = 25 * (Math.floor(Math.random() * 5)) - 50
-
-        image.style.transform = `translate(${x}px, ${y}px)`
+slideArea.addEventListener("mouseover", function () {
+    images.forEach(img => {
+        const x = 20 * Math.floor(Math.random() * 5 - 2)
+        const y = 20 * Math.floor(Math.random() * 5 - 2)
+        img.style.transform = `translate(${x}px, ${y}px)`
     })
 })
 
-// Mouse out 
-slideArea.addEventListener('mouseout', function () {
-    images.forEach(image => {
-
-
-        image.style.transform = ""
+slideArea.addEventListener("mouseout", function () {
+    images.forEach(img => {
+        img.style.transform = ""
     })
 })

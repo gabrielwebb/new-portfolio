@@ -10,6 +10,42 @@
   }
 }
 
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 500px) {
+  a.button {
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .content-item2 {
+    visibility: hidden;
+  }
+}
+
+.intro {
+  margin-left: auto;
+}
+.typing::after {
+  content: "";
+  right: -2px;
+  width: 1px;
+  height: 5%;
+  border-right: 2px solid white;
+  animation: blink 0.5s infinite ease;
+}
 body {
   font-family: "Rubik", Arial;
   font-size: 18px;
@@ -82,6 +118,7 @@ a.button {
   color: #000000;
   border-radius: 50px;
   padding: 0.5em 1.5em 0.5em 1.5em;
+  margin: 20px;
 }
 
 p {
@@ -97,6 +134,7 @@ section.hero {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100% 50%;
+  width: 100%;
 }
 
 section.hero h2,
@@ -113,6 +151,15 @@ section.content {
 }
 
 .content-item {
+  margin: 20px;
+  padding: 20px;
+
+  text-align: center;
+  align-items: center;
+
+  width: 100%;
+}
+.content-item2 {
   margin: 20px;
   padding: 20px;
 

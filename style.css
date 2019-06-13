@@ -128,9 +128,9 @@ p {
 section.hero {
   margin: 64px 0 0 0;
   padding: 160px 48px 160px 48px;
-  background-color: #3a3a3a;
+  background-color: #15252b;
   color: #ffffff;
-  background-image: url(/images/hero.jpeg);
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100% 50%;

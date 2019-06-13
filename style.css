@@ -73,14 +73,21 @@ header {
   transition: background-color 1s;
 }
 
+.header-logo {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  left: 0;
+}
+
 header.scrolled {
   background-color: #ffffff;
   color: #000000;
   transition: background-color 1s;
 }
 
-header h1,
-header nav {
+header h1 {
   flex: 1;
 }
 
@@ -231,4 +238,9 @@ footer {
 
 footer label {
   margin-top: 10px;
+}
+.contact-img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
 }

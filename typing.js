@@ -1,9 +1,4 @@
-const texts = [
-  "a Front End Web Developer.",
-  "available for hire",
-  "a night owl",
-  "always learning."
-];
+const texts = ["a Web Developer.", "available for hire", "alway learning"];
 
 let count = 0;
 let index = 0;

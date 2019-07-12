@@ -12,6 +12,7 @@ slideArea.addEventListener("click", function () {
 
     images[currentSlide].style.zIndex = zIndex
 
+    
     images.forEach(img => {
         img.classList.remove("displayed")
     })
